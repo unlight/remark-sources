@@ -1,0 +1,41 @@
+{
+  "name": "remark-sources",
+  "version": "0.0.0-dev",
+  "description": "Insert source code to markdown files",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test:d": "node --inspect-brk index.spec.js",
+    "test:w": "watchexec --watch . --ignore node_modules \"npm run test\"",
+    "eslint:w": "watchexec -w src \"npm run eslint\"",
+    "test": "node index.spec.js"
+  },
+  "dependencies": {
+    "njct": "^8.0.0",
+    "unist-util-visit-children": "^1.1.3"
+  },
+  "peerDependencies": {
+    "remark": ">=10"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^7.0.18",
+    "remark": ">=11",
+    "semantic-release": "^15.13.31",
+    "watchexec-bin": "^1.0.0",
+    "zora": "^3.1.7"
+  },
+  "keywords": [
+    "remark-plugin",
+    "markdown",
+    "remark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unlight/remark-sources.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unlight/remark-sources/issues"
+  },
+  "homepage": "https://github.com/unlight/remark-sources#readme"
+}
