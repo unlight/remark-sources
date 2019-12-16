@@ -1,6 +1,6 @@
 {
   "name": "remark-sources",
-  "version": "0.0.0-dev",
+  "version": "1.0.0",
   "description": "Insert source code to markdown files",
   "main": "index.js",
   "license": "MIT",
