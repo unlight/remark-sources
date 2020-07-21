@@ -24,9 +24,10 @@ function readFile(meta) {
     if (!meta) {
         return undefined;
     }
-    if (meta[0] === '(' && meta[meta.length - 1] === ')') {
-        meta = meta.slice(1, -1);
+    if (meta[0] !== '(' || meta[meta.length - 1] !== ')') {
+        return undefined;
     }
+    meta = meta.slice(1, -1);
     const readFileSync = inject('readFileSync', () => fs.readFileSync);
     try {
         return readFileSync(meta, { encoding: 'utf8' });
