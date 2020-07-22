@@ -3,17 +3,14 @@ const plugin = require('./index');
 const remark = require('remark');
 const { injector } = require('njct');
 
-test('smoke', t => {
+test('smoke', (t) => {
     t.ok(plugin);
     t.ok(typeof plugin === 'function');
     t.ok(plugin.name === 'remarkSources');
 });
 
 function process(markdown, options) {
-    return remark()
-        .use(plugin, options)
-        .processSync(markdown)
-        .toString();
+    return remark().use(plugin, options).processSync(markdown).toString();
 }
 
 test('should find block', (t) => {

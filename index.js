@@ -1,10 +1,9 @@
-const visitChildren = require('unist-util-visit-children')
+const visitChildren = require('unist-util-visit-children');
 const fs = require('fs');
 const child_process = require('child_process');
 const { inject } = require('njct');
 
-const defaultOptions = {
-};
+const defaultOptions = {};
 
 module.exports = function remarkSources(options = {}) {
     options = { ...defaultOptions, ...options };
@@ -18,13 +17,13 @@ module.exports = function remarkSources(options = {}) {
             }
         })(root);
     };
-}
+};
 
 function readFile(meta) {
     if (!meta) {
         return undefined;
     }
-    if (meta[0] !== '(' || meta[meta.length - 1] !== ')') {
+    if (meta.slice(0, 1) !== '(' || meta.slice(-1) !== ')') {
         return undefined;
     }
     meta = meta.slice(1, -1);
