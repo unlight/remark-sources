@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/unlight/remark-sources/compare/v1.0.2...v1.0.3) (2020-07-22)
+
+
+### Bug Fixes
+
+* Build process which removes garbage files npm pack ([8afc81b](https://github.com/unlight/remark-sources/commit/8afc81bdde839c7328e3017159809cee4dc180ed))
+
 ## [1.0.2](https://github.com/unlight/remark-sources/compare/v1.0.1...v1.0.2) (2020-07-22)
 
 
