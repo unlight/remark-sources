@@ -28,3 +28,8 @@ test('should skip block', (t) => {
     const result = process('```js\n```');
     t.equal(result, '```js\n\n```\n');
 });
+
+test('should skip block if format is invalid', (t) => {
+    const result = process('```js {other.js}\n```');
+    t.equal(result, '```js {other.js}\n\n```\n');
+});
