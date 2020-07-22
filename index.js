@@ -1,6 +1,5 @@
 const visitChildren = require('unist-util-visit-children');
 const fs = require('fs');
-const child_process = require('child_process');
 const { inject } = require('njct');
 
 const defaultOptions = {};
