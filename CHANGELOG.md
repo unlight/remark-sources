@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/unlight/remark-sources/compare/v1.0.1...v1.0.2) (2020-07-22)
+
+
+### Bug Fixes
+
+* Removed unused child_process ([f761b88](https://github.com/unlight/remark-sources/commit/f761b8826a8e4429f67a736deaf8aab5276aadb9))
+
 ## [1.0.1](https://github.com/unlight/remark-sources/compare/v1.0.0...v1.0.1) (2020-07-22)
 
 
