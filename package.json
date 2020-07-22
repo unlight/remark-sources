@@ -10,7 +10,8 @@
     "test:w": "watchexec --watch . --ignore node_modules \"npm run test\"",
     "test:r": "node index.spec.js",
     "test": "npm run test:cov",
-    "eslint:w": "watchexec -w src \"npm run eslint\""
+    "eslint:w": "watchexec -w src \"npm run eslint\"",
+    "build": "sh Taskfile build"
   },
   "dependencies": {
     "njct": "^8.0.0",
