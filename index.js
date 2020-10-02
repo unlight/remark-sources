@@ -4,6 +4,8 @@ const { inject } = require('njct');
 
 const defaultOptions = {};
 
+const metaRe = new RegExp(/^[^\(]*\(([^\)]+)\)$/);
+
 module.exports = function remarkSources(options = {}) {
     options = { ...defaultOptions, ...options };
     return (root) => {
@@ -22,10 +24,9 @@ function readFile(meta) {
     if (!meta) {
         return undefined;
     }
-    if (meta.slice(0, 1) !== '(' || meta.slice(-1) !== ')') {
+    if (!(meta = (metaRe.exec(meta) || [])[1])) {
         return undefined;
     }
-    meta = meta.slice(1, -1);
     const readFileSync = inject('readFileSync', () => fs.readFileSync);
     try {
         return readFileSync(meta, { encoding: 'utf8' });
