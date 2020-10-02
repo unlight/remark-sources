@@ -21,6 +21,14 @@ test('should find block', (t) => {
     injector.clear();
 });
 
+test('should find block with title', (t) => {
+    let readFileMock = (path) => 'test content';
+    injector.mock('readFileSync', () => readFileMock);
+    const result = process('```js title="My Index" (index.js)\n```');
+    t.ok(result === '```js title="My Index" (index.js)\ntest content\n```\n');
+    injector.clear();
+});
+
 test('should skip block', (t) => {
     const result = process('```js\n```');
     t.equal(result, '```js\n\n```\n');
