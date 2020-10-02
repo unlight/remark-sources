@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/unlight/remark-sources/compare/v1.0.3...v1.1.0) (2020-10-02)
+
+
+### Features
+
+* support titles and other attributes in codeblock meta ([1e9703a](https://github.com/unlight/remark-sources/commit/1e9703a229739eb4f946184973f9be2c72b1244b))
+
 ## [1.0.3](https://github.com/unlight/remark-sources/compare/v1.0.2...v1.0.3) (2020-07-22)
 
 
