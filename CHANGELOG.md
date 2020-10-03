@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/unlight/remark-sources/compare/v1.1.0...v2.0.0) (2020-10-03)
+
+
+* Adapt to remark 13 ([1ba1755](https://github.com/unlight/remark-sources/commit/1ba17557c222c31b4334b9a17b5e68df207a25d0))
+
+
+### BREAKING CHANGES
+
+* Remark 13+ is required
+
 # [1.1.0](https://github.com/unlight/remark-sources/compare/v1.0.3...v1.1.0) (2020-10-02)
 
 
