@@ -1,4 +1,4 @@
-const visitChildren = require('unist-util-visit-children');
+const visit = require('unist-util-visit');
 const fs = require('fs');
 const { inject } = require('njct');
 
@@ -9,14 +9,12 @@ const metaRe = new RegExp(/^[^\(]*\(([^\)]+)\)$/);
 module.exports = function remarkSources(options = {}) {
     options = { ...defaultOptions, ...options };
     return (root) => {
-        visitChildren((node, index, parent) => {
-            if (node && node.type === 'code') {
-                const content = readFile(node.meta);
-                if (content !== undefined) {
-                    node.value = content;
-                }
+        visit(root, 'code', function (node) {
+            const content = readFile(node.meta);
+            if (content !== undefined) {
+                node.value = content;
             }
-        })(root);
+        });
     };
 };
 

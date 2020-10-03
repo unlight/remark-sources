@@ -6,7 +6,7 @@ build() {
     set -x
     rm -rfv dist
     mkdir dist
-    cp -rfv index.js dist
+    cp -rfv src/index.js dist
     cp -fv README.md LICENSE package.json dist
     set +x
 }
